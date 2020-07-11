@@ -39,7 +39,7 @@ nav.responsive-nav {
       display: flex;
       flex-direction: row-reverse;
       width: 100%;
-      padding: 10px 20px;
+      padding: 10px;
       text-decoration: none;
       color: white;
       font-size: 25px;
@@ -79,6 +79,7 @@ nav.responsive-nav {
       a {
         flex-direction: row;
         justify-content: space-between;
+        padding: 10px 20px;
       }
       i {
         margin-right: 0;

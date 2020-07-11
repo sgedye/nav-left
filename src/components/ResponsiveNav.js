@@ -20,7 +20,7 @@ function ResponsiveNav ({ navLinks, background, hoverBackground, linkColor, logo
       >
         {navLinks.map((link) => (
           <li
-            key={link.title}
+            key={link.id}
             onMouseEnter={() => setHoverIndex(link.id)}
             onMouseLeave={() => setHoverIndex(-1)}
             style={{
