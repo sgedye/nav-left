@@ -6,14 +6,18 @@ function ResponsiveNav ({ navLinks, background, hoverBackground, linkColor, logo
   const [navOpen, setNavOpen] = useState(false)
 
   return (
-    <nav class="responsive-nav" style={{ background: background || "#222" }}>
+    <nav
+      className="responsive-nav"
+      style={{ background: background || "#222" }}
+    >
+      <figure onClick={() => setNavOpen(!navOpen)}>
+        <img src={logo} height="45px" width="45px" alt="Logo-Nav-Toggler" />
+      </figure>
+      <h1>Webpage</h1>
       <ul
         style={{ background: background || "#222" }}
         className={navOpen ? "active" : ""}
       >
-        <figure onClick={() => setNavOpen(!navOpen)}>
-          <img src={logo} height="40px" width="40px" alt="Logo-Nav-Toggler" />
-        </figure>
         {navLinks.map((link) => (
           <li
             key={link.title}
@@ -24,7 +28,7 @@ function ResponsiveNav ({ navLinks, background, hoverBackground, linkColor, logo
                 hoverIndex === link.id ? hoverBackground || "#999" : "",
             }}
           >
-            <Link to={link.path} style={{ color: linkColor || "#eee" }}>
+            <Link to={link.path} style={{ color: linkColor || "#eee" }} onClick={() => setNavOpen(false)}>
               {link.title}
               <i className={link.icon} />
             </Link>

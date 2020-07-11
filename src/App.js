@@ -1,6 +1,6 @@
 import React from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
-import './App.css';
+// import './App.css';
 import logo from './logo.svg'
 
 import ResponsiveNav from './components/ResponsiveNav';
@@ -30,7 +30,7 @@ function App() {
         <Route path="/" exact component={Home} />
         <Route path="/contact" component={Contact} />
         <Route path="/blog" component={Blog} />
-        <Route path="/about" render={() => <About />} />
+        <Route path="/about" component={About} />
       </Switch>
     </BrowserRouter>
   )
