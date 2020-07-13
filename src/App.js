@@ -7,6 +7,7 @@ import Home from './pages/Home';
 import About from './pages/About';
 import Blog from './pages/Blog';
 import Contact from './pages/Contact';
+import Tabs from './components/Tabs';
 import Footer from './components/Footer';
 
 function App() {
@@ -34,6 +35,7 @@ function App() {
           <Route path="/about" component={About} />
         </Switch>
       </BrowserRouter>
+      <Tabs />
       <Footer />
     </>
   );
