@@ -1,12 +1,13 @@
 import React from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
-import logo from './logo.svg'
+import logo from './logo.svg';
 
 import ResponsiveNav from './components/ResponsiveNav';
-import Home from './pages/Home'
+import Home from './pages/Home';
 import About from './pages/About';
 import Blog from './pages/Blog';
 import Contact from './pages/Contact';
+import Footer from './components/Footer';
 
 function App() {
   const navLinks = [
@@ -17,22 +18,25 @@ function App() {
   ];
 
   return (
-    <BrowserRouter>
-      <ResponsiveNav
-        navLinks={navLinks}
-        background="#333"
-        hoverBackground="#666"
-        linkColor="#fff"
-        logo={logo}
-      />
-      <Switch>
-        <Route path="/" exact component={Home} />
-        <Route path="/contact" component={Contact} />
-        <Route path="/blog" component={Blog} />
-        <Route path="/about" component={About} />
-      </Switch>
-    </BrowserRouter>
-  )
-}
+    <>
+      <BrowserRouter>
+        <ResponsiveNav
+          navLinks={navLinks}
+          background="#333"
+          hoverBackground="#666"
+          linkColor="#fff"
+          logo={logo}
+        />
+        <Switch>
+          <Route path="/" exact component={Home} />
+          <Route path="/contact" component={Contact} />
+          <Route path="/blog" component={Blog} />
+          <Route path="/about" component={About} />
+        </Switch>
+      </BrowserRouter>
+      <Footer />
+    </>
+  );
+};
 
 export default App;
