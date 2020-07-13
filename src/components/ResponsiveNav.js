@@ -1,17 +1,21 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
 function ResponsiveNav ({ navLinks, background, hoverBackground, linkColor, logo }) {
   const [hoverIndex, setHoverIndex] = useState(-1)
   const [navOpen, setNavOpen] = useState(false)
 
+  useEffect(() => {
+    document.getElementById('logo').classList.toggle('active');
+  }, [navOpen])
+  
   return (
     <nav
       className="responsive-nav"
       style={{ background: background || "#222" }}
     >
       <figure onClick={() => setNavOpen(!navOpen)}>
-        <img src={logo} height="45px" width="45px" alt="Logo-Nav-Toggler" />
+        <img id="logo" src={logo} height="45px" width="45px" alt="Logo-Nav-Toggler" />
       </figure>
       <h1>Webpage</h1>
       <ul

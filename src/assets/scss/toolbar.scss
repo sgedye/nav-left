@@ -56,6 +56,12 @@ nav.responsive-nav {
     figure {
       cursor: pointer;
       pointer-events: all;
+      img {
+        transition: transform 300ms ease-in-out;
+        &.active {
+          transform: rotate(-120deg);
+        }
+      }
     }
     h1 {
       text-align: center;
