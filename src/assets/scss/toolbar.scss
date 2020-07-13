@@ -58,8 +58,8 @@ nav.responsive-nav {
       pointer-events: all;
       img {
         transition: transform 300ms ease-in-out;
-        &.active {
-          transform: rotate(-120deg);
+        &.logo-roll {
+          transform: rotate(120deg);
         }
       }
     }

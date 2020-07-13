@@ -6,9 +6,9 @@ function ResponsiveNav ({ navLinks, background, hoverBackground, linkColor, logo
   const [navOpen, setNavOpen] = useState(false)
 
   useEffect(() => {
-    document.getElementById('logo').classList.toggle('active');
+    document.getElementById('logo').classList.toggle('logo-roll');
   }, [navOpen])
-  
+
   return (
     <nav
       className="responsive-nav"
