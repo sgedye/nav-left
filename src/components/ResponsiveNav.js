@@ -28,8 +28,7 @@ function ResponsiveNav ({ navLinks, background, hoverBackground, linkColor, logo
             onMouseEnter={() => setHoverIndex(link.id)}
             onMouseLeave={() => setHoverIndex(-1)}
             style={{
-              background:
-                hoverIndex === link.id ? hoverBackground || "#999" : "",
+              background: hoverIndex === link.id ? hoverBackground || "#999" : "",
             }}
           >
             <Link to={link.path} style={{ color: linkColor || "#eee" }} onClick={() => setNavOpen(false)}>
