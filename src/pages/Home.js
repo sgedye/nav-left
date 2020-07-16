@@ -1,38 +1,18 @@
-import React from "react"
+import React from "react";
+import styled from "styled-components";
+import HeroImage from "../assets/images/hero-image.jpeg";
 
 function Home() {
   return (
-    <section className="page-wrapper">
-      <div>
-        <p>Home</p>
-        <p>Home</p>
-        <p>Home</p>
-      </div>
-      <div>
-        <p>Home</p>
-        <p>Home</p>
-        <p>Home</p>
-      </div>{" "}
-      <div>
-        <p>
-          Home Home Home Home Home Home Home Home Home Home Home Home Home Home
-          Home
-        </p>
-        <p>
-          Home Home Home Home Home Home Home Home Home Home Home Home Home Home
-          Home
-        </p>
-        <p>
-          Home Home Home Home Home Home Home Home Home Home Home Home Home Home
-          Home
-        </p>
-      </div>{" "}
-      <div>
-        <p>Home</p>
-        <p>Home</p>
-      </div>
-    </section>
+    <Wrapper className="page-wrapper">
+      <h2>Home</h2>
+      <img src={HeroImage} alt="jessie" width="200px" />
+    </Wrapper>
   )
 }
+
+const Wrapper = styled.section`
+  text-align: center;
+`;
 
 export default Home

@@ -1,15 +1,16 @@
 import React from 'react';
 import MenuData from './../assets/data/menu-data';
+import { Link } from "react-router-dom"
 
 const Tabs = () => (
   <div className="tabs">
     <ul>
       {MenuData.map(tab => (
         <li key={tab.id}>
-          <a href={tab.path}>
+          <Link to={tab.path}>
             <i className={tab.icon} />
             {tab.title}
-          </a>
+          </Link>
         </li>
       ))}
     </ul>

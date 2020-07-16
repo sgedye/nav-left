@@ -1,0 +1,112 @@
+nav.responsive-nav {
+  position: fixed;
+  display: grid;
+  grid-template-columns: 60px 0 1fr;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  height: 60px;
+  width: 100%;
+  margin: 0;
+  text-shadow: 0 0 5px #555, 1px 1px #111;
+  border-collapse: separate; // Needed to use box-shadow on IE9+
+  box-shadow: 2px 2px 2px #ccc;
+  figure {
+    display: inline-block;
+    width: 60px;
+    text-align: center;
+    -ms-pointer-events: none;
+    pointer-events: none;
+  }
+  h1 {
+    display: inline-block;
+    color: white;
+  }
+  ul {
+    @supports(justify-self: flex-end) {
+      @include flexbox();
+      justify-self: flex-end;
+      align-items: center;
+      margin-block-start: 0;
+      margin-block-end: 0;
+    }
+    height: 100%;
+    background: #333;
+    border-collapse: separate; // Needed to use box-shadow on IE9+
+    box-shadow: 2px 2px 2px #ccc;
+    li {
+      list-style-type: none;
+      border-radius: 5px;
+      border-collapse: separate; // Needed to use box-shadow on IE9+
+      box-shadow: 0 0 0 0 #999;
+      transition: box-shadow 300ms ease;
+      &:hover {
+        border-collapse: separate; // Needed to use box-shadow on IE9+
+        box-shadow: 0 0 5px 0 #333;
+      }
+    }
+    a {
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-direction: row-reverse;
+      -moz-flex-direction: row-reverse;
+      flex-direction: row-reverse;
+      width: 100%;
+      padding: 10px;
+      text-decoration: none;
+      color: white;
+      font-size: 25px;
+    }
+    i {
+      margin-right: 5px;
+    }
+  }
+}
+
+@media screen and (max-width: 1023px ) {
+  nav.responsive-nav {
+    grid-template-columns: 60px 1fr 0;
+    figure {
+      cursor: pointer;
+      pointer-events: all;
+      img {
+        transition: transform 300ms ease-in-out;
+        &.logo-roll {
+          transform: rotate(120deg);
+        }
+      }
+    }
+    h1 {
+      text-align: center;
+    }
+    ul {
+      position: fixed;
+      width: 250px;
+      height: calc(100% - 120px);
+      margin: 0;
+      padding: 0;
+      left: -190px;
+      top: 60px;
+      -ms-flex-direction: column;
+      -moz-flex-direction: column;
+      flex-direction: column;
+      transition: all 300ms ease-in-out;
+      &.active {
+        left: 0;
+      }
+      li {
+        width: 100%;
+      }
+      a {
+        -ms-flex-direction: row;
+        -moz-flex-direction: row;
+        flex-direction: row;
+        justify-content: space-between; // Not supported in IE.
+        padding: 10px 20px;
+      }
+      i {
+        margin-right: 0;
+      }
+    }
+  }
+}

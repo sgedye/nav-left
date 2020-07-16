@@ -6,25 +6,6 @@ const Contact = () => {
       <div>
         <p>Contact</p>
         <p>Contact</p>
-        <p>Contact</p>
-      </div>
-      <div>
-        <p>
-          Contact Contact Contact Contact Contact Contact Contact Contact
-          Contact
-        </p>
-        <p>Contact</p>
-        <p>Contact</p>
-      </div>{" "}
-      <div>
-        <p>
-          Contact Contact Contact Contact Contact Contact Contact Contact
-          Contact
-        </p>
-        <p>Contact</p>
-        <p>Contact</p>
-      </div>{" "}
-      <div>
         <p>
           Contact Contact Contact Contact Contact Contact Contact Contact
           Contact

@@ -26,6 +26,7 @@ function App() {
           linkColor="#fff"
           logo={logo}
         />
+        <Tabs />
         <Switch>
           <Route path="/" exact component={Home} />
           <Route path="/contact" component={Contact} />
@@ -36,7 +37,6 @@ function App() {
           <Route path="/about" component={About} />
         </Switch>
       </BrowserRouter>
-      <Tabs />
       <Footer />
     </>
   );
